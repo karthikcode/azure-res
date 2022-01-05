@@ -11,9 +11,9 @@ using System.Net.Http;
 
 namespace Company.Function
 {
-    public static class GetResumeCounter
+    public static class GetResumeCounters
     {
-        [FunctionName("GetResumeCounter")]
+        [FunctionName("GetResumeCounters")]
         public static HttpResponseMessage Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             [CosmosDB(databaseName:"azureresumes",collectionName: "Counter", ConnectionStringSetting = "AzureResumeConnectionString", Id="1",PartitionKey ="1")] Counter counter,
